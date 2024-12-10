@@ -152,6 +152,21 @@ func TestConfigPrepare(t *testing.T) {
 			true,
 		},
 		{
+			"max_run_duration_seconds",
+			60,
+			false,
+		},
+		{
+			"max_run_duration_seconds",
+			nil,
+			false,
+		},
+		{
+			"max_run_duration_seconds",
+			"BAD VALUE",
+			true,
+		},
+		{
 			"node_affinity",
 			nil,
 			false,
